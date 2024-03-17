@@ -1,9 +1,10 @@
-import React,{useState} from 'react'
+import React,{useState} from 'react';
+import {Link}from 'react-router-dom';
 export default function About() {
 ///start ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 const [myStyle, setMyStyle] = useState({
-    color:'white',
-    backgroundColor:'black'
+    color:'black',
+    backgroundColor:'white'
 })
 const [mytext,setMyText] = useState("enable dark mode")
 const changeMode=()=>{

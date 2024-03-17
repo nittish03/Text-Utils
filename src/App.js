@@ -4,6 +4,14 @@ import TextForm from './components/TextForm';
 import Alert from './components/Alert';
 import About from './components/About';
 import React, { useState } from 'react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+  BrowserRouter
+}from "react-router-dom";
+
 function App() {
 
 const [tc,setTc] = useState('dark');
@@ -46,15 +54,21 @@ const toggleMode=()=>{
 
   return (
   <>
+  <BrowserRouter>
 
-<Navbar title="TextUtils" mode={Mode} tc={tc} toggleMode={toggleMode} aboutText="nittish"></Navbar>
+<Navbar title="TextUtils" mode={Mode} tc={tc} toggleMode={toggleMode} aboutText="about"></Navbar>
 <Alert alert={alert} ></Alert>
-<div className="container my-3">
-<TextForm showAlert={showAlert} 
-heading="Enter the text to analyse below">
-</TextForm>
+  <div>
+  <Routes>
+    <Route showAlert={showAlert} exact path='/about' element={<About></About>}></Route>
+    <Route exact path='/Home' element={<div className="container my-3">
+<TextForm showAlert={showAlert} heading="Enter the text to analyse below"></TextForm>
 </div>
-<About></About>
+}></Route>
+  </Routes>
+  </div>
+
+  </BrowserRouter>
   </>
   );
 }
