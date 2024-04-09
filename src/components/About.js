@@ -25,17 +25,17 @@ setMyText("enable light mode");
 // end ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 return (
 <>
-<div className='container py-2' style={myStyle}>
+<div id='myBox' className='container py-2' style={myStyle}>
     <h2>About Us</h2>
     <div className="accordion" style={myStyle} id="accordionExample">
     <div className="accordion-item">
         <h2 className="accordion-header">
-        <button className="accordion-button" type="button" style={myStyle} data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <button  className="accordion-button" type="button" style={myStyle} data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
             Accordion Item #1
         </button>
         </h2>
         <div id="collapseOne" className="accordion-collapse collapse show" style={myStyle} data-bs-parent="#accordionExample">
-        <div className="accordion-body">
+        <div className="accordion-body myB">
             <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
         </div>
         </div>
