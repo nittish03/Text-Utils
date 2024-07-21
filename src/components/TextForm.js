@@ -46,11 +46,11 @@ props.showAlert("Extra spaces removed","success");
 <div className="mb-3">
     <textarea className="form-control" value={text}  onChange={HandleOnChange} id="myBox" rows=""></textarea>
 </div>
-<button className="btn btn-primary mx-2" onClick={HandleUpClick}>Convert to upper case</button>
-<button className="btn btn-primary mx-2" onClick={HandleDownClick}>Convert to lower case</button>
-<button className="btn btn-primary mx-2" onClick={HandleNoText}>Clear text</button>
-<button className="btn btn-primary mx-2" onClick={HandleCopy}>Copy text</button>
-<button className="btn btn-primary mx-2" onClick={HandleExtraSpaces}>Remove Extra Spaces</button>
+<button className="btn btn-primary mx-2 m-3" onClick={HandleUpClick}>Convert to upper case</button>
+<button className="btn btn-primary mx-2 m-3" onClick={HandleDownClick}>Convert to lower case</button>
+<button className="btn btn-primary mx-2 m-3" onClick={HandleNoText}>Clear text</button>
+<button className="btn btn-primary mx-2 m-3" onClick={HandleCopy}>Copy text</button>
+<button className="btn btn-primary mx-2 m-3" onClick={HandleExtraSpaces}>Remove Extra Spaces</button>
 </div>
 <div className="container my-2">
 <h2>Your text summary</h2>

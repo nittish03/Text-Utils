@@ -31,20 +31,20 @@ setTimeout(() => {
 const toggleMode=()=>{
   if(Mode==='light'){
     setMode('dark');
-    showAlert("dark mode has been enabled","success");
     document.getElementById("myBox").style.backgroundColor="grey";
     document.getElementById("myBox").style.color="white";
     document.body.style.backgroundColor="#131517";
     document.body.style.color="white";
     document.title="textUtils-dark-mode"
     setTc('light');
+    showAlert("dark mode has been enabled","success");
   }else{
     setMode('light'); 
-    showAlert("light mode has been enabled","success");
     document.getElementById("myBox").style.backgroundColor="white";
     document.body.style.backgroundColor="white";
     document.getElementById("myBox").style.color="black";
-
+    
+    showAlert("light mode has been enabled","success");
     document.body.style.color="black";
     setTc('dark');
     document.title="textUtils-light-mode"
@@ -58,15 +58,10 @@ const toggleMode=()=>{
 
 <Navbar title="TextUtils" mode={Mode} tc={tc} toggleMode={toggleMode} aboutText="about"></Navbar>
 <Alert alert={alert} ></Alert>
-  <div>
   <Routes>
-    <Route showAlert={showAlert} exact path='/about' element={<About></About>}></Route>
-    <Route exact path='/Home' element={<div className="container my-3">
-<TextForm showAlert={showAlert} heading="Enter the text to analyse below"></TextForm>
-</div>
-}></Route>
+    <Route exact path='/Home' element={<TextForm showAlert={showAlert} heading="Enter the text to analyse below"></TextForm>}></Route>
+    <Route exact path='/' element={<TextForm showAlert={showAlert} heading="Enter the text to analyse below"></TextForm>}></Route>
   </Routes>
-  </div>
 
   </BrowserRouter>
   </>
